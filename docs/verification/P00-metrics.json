@@ -1,0 +1,56 @@
+{
+  "version": "0.0.1",
+  "environment": "Windows 11 x64, single display at 150% scale",
+  "caveats": [
+    "Working sets sum shared pages and are not unique physical memory.",
+    "CPU is the sum of Electron percentCPUUsage values.",
+    "FPS is the last completed requestAnimationFrame sample; it may be stale under throttling.",
+    "Visibility and occlusion were not recorded; averages are not a continuously foreground rendering cost.",
+    "The earlier mixed-window idle run was excluded."
+  ],
+  "idle": {
+    "recordedAt": "2026-10-20T09:32:03.730Z",
+    "startupsMs": [
+      227,
+      180,
+      198,
+      223,
+      239
+    ],
+    "startupMedianMs": 223,
+    "idleDurationSeconds": 610,
+    "sampleCount": 62,
+    "cpuPercentSumMean": 1.09641269401618,
+    "workload": "one-pet-window-idle-locked",
+    "workingSetMBMean": 361.29040727459017,
+    "workingSetMBMax": 431.078125,
+    "workingSetMBFirst": 395.1953125,
+    "workingSetMBLast": 340.046875,
+    "fpsMean": 240.09442240409535,
+    "gpuSamples": 60,
+    "gpuBusiestEngineMeanPercent": 1.238160774460289,
+    "gpuBusiestEngineMaxPercent": 5.02731784378189,
+    "displays": [
+      {
+        "scaleFactor": 1.5,
+        "workArea": {
+          "x": 0,
+          "y": 0,
+          "width": 1707,
+          "height": 1019
+        }
+      }
+    ]
+  },
+  "interaction": {
+    "actions": 20,
+    "responseMeanMs": 36.183255000000166,
+    "responseP95Ms": 27.753600000000006,
+    "cpuPercentSumMean": 5.962568839759094,
+    "workingSetMBMean": 628.556640625,
+    "workingSetMBMax": 653.06640625,
+    "rafMean": 239.71891367932412,
+    "gpuSamples": 5,
+    "gpuBusiestEngineMeanPercent": 6.0262970398486875
+  }
+}

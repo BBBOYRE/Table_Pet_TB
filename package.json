@@ -1,0 +1,34 @@
+{
+  "name": "table-pet-tb",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Windows desktop companion — P00 technical prototype",
+  "type": "module",
+  "main": "out/main/index.js",
+  "engines": { "node": ">=24.0.0 <25" },
+  "scripts": {
+    "setup:runtime": "powershell -NoProfile -File scripts/install-electron.ps1",
+    "dev": "electron-vite dev",
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && node scripts/generate-icon.mjs && electron-vite build",
+    "start": "node scripts/launch.mjs",
+    "test": "node --test tests/unit/*.test.ts",
+    "test:desktop": "playwright test",
+    "benchmark": "node scripts/benchmark.mjs"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.1",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "6.1.2",
+    "electron": "44.9.1",
+    "electron-vite": "6.0.0",
+    "typescript": "7.0.2",
+    "vite": "8.3.4"
+  }
+}
